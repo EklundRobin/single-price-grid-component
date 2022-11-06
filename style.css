@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  --light-gray: hsl(204, 43%, 93%);
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --grayish-blue: hsl(218, 22%, 67%);
+
+  --card-boder-radius: 10px;
+  --card-padding: 2rem;
+
+  --box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.26);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-gray);
+}
+
+.container {
+  max-width: 1440px;
+  /* height: 90vh; */
+  margin-top: 50px;
+}
+
+.card {
+  width: 700px;
+}
+
+.header {
+  border-top-left-radius: var(--card-boder-radius);
+  border-top-right-radius: var(--card-boder-radius);
+  background-color: #fff;
+  padding: var(--card-padding);
+}
+
+.header h1 {
+  color: var(--cyan);
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  color: var(--bright-yellow);
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: var(--grayish-blue);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.sub {
+  background-color: var(--cyan);
+  color: #fff;
+  padding: var(--card-padding);
+  border-bottom-left-radius: var(--card-boder-radius);
+}
+
+.price {
+  display: flex;
+  align-items: center;
+}
+
+.price h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.price span {
+  padding-left: 10px;
+  font-size: 16px;
+  color: var(--light-gray);
+}
+
+.sub p {
+  margin-bottom: 15px;
+}
+
+.sub a {
+  background-color: var(--bright-yellow);
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding: 15px;
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.faq {
+  padding: var(--card-padding);
+  border-bottom-right-radius: var(--card-boder-radius);
+  /* Slightly changed the cyan color since I found no alternative color in style guides */
+  background-color: hsl(179, 70%, 45%);
+  color: #fff;
+}
+
+.faq h2 {
+  margin-bottom: 20px;
+}
+
+.faq p {
+  color: var(--light-gray);
+}
+
+footer {
+  padding: 50px;
+}
+
+@media (max-width: 375px) {
+  .container {
+    max-width: 375px;
+    margin-top: 0;
+  }
+
+  .card {
+    max-width: 375px;
+  }
+
+  .header,
+  .sub,
+  .faq {
+    border-radius: 0;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
